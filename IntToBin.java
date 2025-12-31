@@ -2,9 +2,7 @@
 public class IntToBin {
 
     public static void main(String[] args) {
-        //int x = Integer.parseInt(args[0]);
-        int x = Integer.parseInt("723462347");
-
+        int x = Integer.parseInt(args[0]);
         System.out.println("Binary representation of " + x + " is: " + toBinary(x));
     }
 
@@ -14,13 +12,10 @@ public class IntToBin {
         {
             return "1";
         }
-        if(x % 2 == 0)
+        if(x == 0)
         {
-            return toBinary(x / 2) + "0";
+            return "0";
         }
-        else
-        {
-            return toBinary(x / 2) + "1";
-        }
+        return toBinary(x / 2) + (x % 2);
     }    
  }
