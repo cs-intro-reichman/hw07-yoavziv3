@@ -2,8 +2,7 @@
 public class Sierpinski {
 	
 	public static void main(String[] args) {
-		//sierpinski(Integer.parseInt(args[0]));
-		sierpinski(7);
+		sierpinski(Integer.parseInt(args[0]));
 	}
 	
 	// Draws a Sierpinski triangle of depth n on the standard canvass.

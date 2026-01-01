@@ -16,11 +16,11 @@ public class Koch {
 		      Double.parseDouble(args[3]), Double.parseDouble(args[4]));
 		*/
 
-		/*
+		
 		// Tests the snowflake function:
 		// Gets n, and draws a Koch snowflake of n edges in the standard canvass.
 		snowFlake(Integer.parseInt(args[0]));
-		*/
+		
 	}
 
 	/** Gets n, x1, y1, x2, y2,
@@ -37,8 +37,8 @@ public class Koch {
 		double y3 = y1 + distY;
 		double x4 = x2 - distX;
 		double y4 = y2 - distY;
-		double x5 = ((Math.sqrt(3)) / 6) * (y3 - y4) + 0.5 * (x3 + x4);
-		double y5 = (Math.sqrt(3) / 6) * (x4 - x3) + 0.5 * (y3 + y4);
+		double x5 = ((Math.sqrt(3)) / 6) * (y1 - y2) + 0.5 * (x1 + x2);
+		double y5 = (Math.sqrt(3) / 6) * (x2 - x1) + 0.5 * (y1 + y2);
 		curve(n-1, x1, y1, x3, y3);
 		curve(n-1, x3, y3, x5, y5);
 		curve(n-1, x5, y5, x4, y4);
@@ -50,10 +50,10 @@ public class Koch {
 		// A little tweak that makes the drawing look better
 		StdDraw.setYscale(0, 1.1);
 		StdDraw.setXscale(0, 1.1);
-		double x1 = 0.2;
-		double y1 = 0.2;
+		double x1 = 0.3;
+		double y1 = 0.3;
 		double x3 = 1;
-		double y3 = 0.2;
+		double y3 = 0.3;
 		double x2 = (x1 + x3) / 2;
 		double y2 = y1 + Math.abs(x3 - x1) * Math.sqrt(3) / 2;
 		curve(n, x1, y1, x2, y2);
